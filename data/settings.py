@@ -27,8 +27,8 @@ SECRET_KEY = 'django-insecure-i!nd42a-061l@ue4kfb)b_6%ro8ujqtnr8aq@)8lc3&na(50(4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['https://squaredata.herokuapp.com','localhost','127.0.0.1']
+print("hii")
 
 # Application definition
 
