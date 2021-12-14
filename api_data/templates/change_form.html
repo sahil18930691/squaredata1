@@ -1,0 +1,54 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_urls static admin_list %}
+{% block content %}
+<div style="overflow: auto;">
+    <table id="change-history">
+        <thead>
+        <tr>
+            <th scope="col">RECORD ID </th>
+            <th scope="col">RECORD STATUS</th>
+            <th scope="col">ASSIGN TO</th>
+            <th scope="col">ASSET TYPE</th>
+            <th scope="col">TRANSACTION TYPE</th>
+            <th scope="col">YEAR</th>
+            <th scope="col">SOURCE PROPERTY NAME</th>
+            <th scope="col">SALE RENT VALUE</th>
+            <th scope="col">AREA</th>
+            <th scope="col">RATE SQFT</th>
+            <th scope="col">UNIT NUMBER</th>
+            <th scope="col">VILLAGE</th>
+            <th scope="col">CTS NO</th>
+            <th scope="col">DOCUMENT NUMBER</th>
+            <th scope="col">TRANSFER STATUS</th>
+            <th scope="col">BUYER NAME</th>
+            <th scope="col">SELLER NAME</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for data in listing_data %}
+        <tr>
+            <!-- <th scope="row">{{ action.action_time|date:"DATETIME_FORMAT" }}</th> -->
+           <td>{{ data.recordId }}</td>
+           <td>{{ data.recordStatus }}</td>
+           <td>{{ data.assignTo}}</td>
+           <td>{{ data.assetType }}</td>
+           <td>{{ data.transactionType }}</td>
+           <td>{{ data.year }}</td>
+           <td>{{ data.sourcePropertyName }}</td>
+           <td>{{ data.saleRentValue }}</td>
+           <td>{{ data.area }}</td>
+           <td>{{ data.rateSqft }}</td>
+           <td>{{ data.unitNumber }}</td>
+           <td>{{ data.village }}</td>
+           <td>{{ data.ctsNo }}</td>
+           <td>{{ data.documentNumber }}</td>
+           <td>{{ data.transferStatus }}</td>
+           <td>{{ data.buyerName }}</td>
+           <td>{{ data.sellerName }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+       </table>
+</div>
+    
+{% endblock %}
